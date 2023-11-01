@@ -60,41 +60,46 @@ span{
     font-weight: 400;
     padding-top: 130px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-right: 305px;
     font-size: 20px;
 }
 .companies>p{
     color: hsla(0, 0%, 100%, 0.6);
     font-family: 'Lexend Deca', sans-serif;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 .templates>p{
     color: hsla(0, 0%, 100%, 0.6);
     font-family: 'Lexend Deca', sans-serif;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 .queries>p{
     color: hsla(0, 0%, 100%, 0.6);
     font-family: 'Lexend Deca', sans-serif;
-    padding-top: 5px;
+    padding-top: 10px;
 }
-.box-2{
-    height: 100%;
-    width: 50%;
-    background-color: hsl(277, 64%, 61%);
-    border-radius: 0px 50px 50px 0px;
-}
-.image{
+.box-2 {
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 50%;
     border-radius: 0px 50px 50px 0px;
-    }
-    .image::before{
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: hsla(277, 68%, 51%, 1); 
-    }
+    overflow: hidden; /* Ajoute cette ligne pour assurer que le contenu déborde correctement */
+}
+
+.overlay {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 68%, 51%, 0.5);
+    z-index: 1000;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 50px 50px 0px;
+    z-index: -1; /* Change le z-index à -1 pour mettre l'image derrière la couleur violette */
+}
+
